@@ -6,7 +6,6 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,7 +16,7 @@ import android.view.ViewGroup;
 
 import com.example.seventh.ui.activities.MainActivity;
 import com.example.seventh.R;
-import com.example.seventh.data.DrinkModel;
+import com.example.seventh.data.datamodels.DrinkModel;
 import com.example.seventh.ui.adapters.DrinkAdapter;
 import com.example.seventh.databinding.FragmentFoodBinding;
 import com.example.seventh.ui.viewmodels.DrinkViewModel;
@@ -55,7 +54,7 @@ public class Drink extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         generateElements();
-        drinkViewModel.drinks.observe(getViewLifecycleOwner(), drinks -> drinkAdapter.updateDrinks(drinks));
+        //drinkViewModel.drinks.observe(getViewLifecycleOwner(), drinks -> drinkAdapter.updateDrinks(drinks));
     }
 
     private void generateElements() {
