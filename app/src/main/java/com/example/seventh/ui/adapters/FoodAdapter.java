@@ -13,7 +13,7 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.seventh.R;
-import com.example.seventh.ui.FoodModel;
+import com.example.seventh.data.FoodModel;
 
 import java.util.List;
 

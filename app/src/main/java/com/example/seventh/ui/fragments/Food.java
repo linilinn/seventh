@@ -16,7 +16,7 @@ import android.view.ViewGroup;
 
 import com.example.seventh.ui.activities.MainActivity;
 import com.example.seventh.R;
-import com.example.seventh.ui.FoodModel;
+import com.example.seventh.data.FoodModel;
 import com.example.seventh.ui.adapters.FoodAdapter;
 import com.example.seventh.databinding.FragmentFoodBinding;
 
