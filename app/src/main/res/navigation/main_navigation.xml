@@ -33,7 +33,7 @@
             app:destination="@id/drink" />
         <action
             android:id="@+id/action_choose_to_food"
-            app:destination="@id/food" />
+            app:destination="@id/foodCreate" />
     </fragment>
     <fragment
         android:id="@+id/drink"
@@ -45,7 +45,7 @@
             app:destination="@id/item" />
     </fragment>
     <fragment
-        android:id="@+id/food"
+        android:id="@+id/foodCreate"
         android:name="com.example.seventh.fragments.Food"
         android:label="fragment_food"
         tools:layout="@layout/fragment_food" >
