@@ -1,29 +1,28 @@
-package com.example.seventh.adapters;
+package com.example.seventh.ui.adapters;
 
 import static android.app.PendingIntent.getActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.seventh.R;
+import com.example.seventh.ui.FoodModel;
 
 import java.util.List;
 
 public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
-    private List<FoodCreate> foodCreateList;
+    private List<FoodModel> foodModelList;
 
 
-    public FoodAdapter(List<FoodCreate> foodList) {
-        this.foodCreateList = foodList;
+    public FoodAdapter(List<FoodModel> foodList) {
+        this.foodModelList = foodList;
     }
 
     @Override
@@ -34,20 +33,20 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        FoodCreate foodCreate = foodCreateList.get(position);
-        holder.textView.setText(foodCreate.getFood());
-        holder.imageView.setImageResource(foodCreate.getImageResource());
+        FoodModel foodModel = foodModelList.get(position);
+        holder.textView.setText(foodModel.getFood());
+        holder.imageView.setImageResource(foodModel.getImageResource());
         holder.itemView.setOnClickListener(view -> {
             Bundle bundle3 = new Bundle();
-            bundle3.putString("item", foodCreate.getFood());
-            bundle3.putString("description", foodCreate.getFoodDescription());
+            bundle3.putString("item", foodModel.getFood());
+            bundle3.putString("description", foodModel.getFoodDescription());
             Navigation.findNavController(view).navigate(R.id.action_food_to_item, bundle3);
         });
     }
 
     @Override
     public int getItemCount() {
-        return foodCreateList.size();
+        return foodModelList.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

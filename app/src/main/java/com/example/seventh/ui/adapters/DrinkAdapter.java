@@ -1,29 +1,28 @@
-package com.example.seventh.adapters;
+package com.example.seventh.ui.adapters;
 
 import static android.app.PendingIntent.getActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.seventh.R;
+import com.example.seventh.ui.DrinkModel;
 
 import java.util.List;
 
 public class DrinkAdapter extends RecyclerView.Adapter<DrinkAdapter.ViewHolder> {
-    private List<DrinkCreate> drinkCreateList;
+    private List<DrinkModel> drinkModelList;
 
 
-    public DrinkAdapter(List<DrinkCreate> drinkList) {
-        this.drinkCreateList = drinkList;
+    public DrinkAdapter(List<DrinkModel> drinkList) {
+        this.drinkModelList = drinkList;
     }
 
     @Override
@@ -34,20 +33,20 @@ public class DrinkAdapter extends RecyclerView.Adapter<DrinkAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        DrinkCreate drinkCreate = drinkCreateList.get(position);
-        holder.textView.setText(drinkCreate.getDrink());
-        holder.imageView.setImageResource(drinkCreate.getImageResource());
+        DrinkModel drinkModel = drinkModelList.get(position);
+        holder.textView.setText(drinkModel.getDrink());
+        holder.imageView.setImageResource(drinkModel.getImageResource());
         holder.itemView.setOnClickListener(view -> {
             Bundle bundle = new Bundle();
-            bundle.putString("item", drinkCreate.getDrink());
-            bundle.putString("description", drinkCreate.getDrinkDescription());
+            bundle.putString("item", drinkModel.getDrink());
+            bundle.putString("description", drinkModel.getDrinkDescription());
             Navigation.findNavController(view).navigate(R.id.action_drink_to_item, bundle);
         });
     }
 
     @Override
     public int getItemCount() {
-        return drinkCreateList.size();
+        return drinkModelList.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

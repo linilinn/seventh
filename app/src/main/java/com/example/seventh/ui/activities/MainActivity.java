@@ -1,8 +1,10 @@
-package com.example.seventh;
+package com.example.seventh.ui.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.seventh.R;
 
 public class MainActivity extends AppCompatActivity {
 

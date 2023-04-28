@@ -1,4 +1,4 @@
-package com.example.seventh.fragments;
+package com.example.seventh.ui.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -9,9 +9,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 
-import com.example.seventh.MainActivity;
+import com.example.seventh.ui.activities.MainActivity;
 import com.example.seventh.R;
 import com.example.seventh.databinding.FragmentItemBinding;
 

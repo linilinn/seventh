@@ -1,4 +1,4 @@
-package com.example.seventh.fragments;
+package com.example.seventh.ui.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -14,10 +14,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.seventh.MainActivity;
+import com.example.seventh.ui.activities.MainActivity;
 import com.example.seventh.R;
-import com.example.seventh.adapters.DrinkCreate;
-import com.example.seventh.adapters.DrinkAdapter;
+import com.example.seventh.ui.DrinkModel;
+import com.example.seventh.ui.adapters.DrinkAdapter;
 import com.example.seventh.databinding.FragmentFoodBinding;
 
 import java.util.ArrayList;
@@ -49,9 +49,9 @@ public class Drink extends Fragment {
     }
 
     private void generateElements() {
-        List<DrinkCreate> drink = new ArrayList<>();
+        List<DrinkModel> drink = new ArrayList<>();
         for (int i = 1; i <= 200; i++) {
-            DrinkCreate temp = new DrinkCreate("Напиток " + i, "Описание напитка " + i, R.drawable.food);
+            DrinkModel temp = new DrinkModel("Напиток " + i, "Описание напитка " + i, R.drawable.food);
             drink.add(temp);
         }
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(mainActivity, RecyclerView.VERTICAL, false);

@@ -1,11 +1,11 @@
-package com.example.seventh.adapters;
+package com.example.seventh.ui;
 
-public class FoodCreate {
+public class FoodModel {
     private String food;
     private String foodDescription;
     private int imageResource;
 
-    public FoodCreate(String food, String foodDescription, int imageResource) {
+    public FoodModel(String food, String foodDescription, int imageResource) {
         this.food = food;
         this.foodDescription = foodDescription;
         this.imageResource = imageResource;
