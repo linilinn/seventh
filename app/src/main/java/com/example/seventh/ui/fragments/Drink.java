@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -19,6 +20,7 @@ import com.example.seventh.R;
 import com.example.seventh.data.DrinkModel;
 import com.example.seventh.ui.adapters.DrinkAdapter;
 import com.example.seventh.databinding.FragmentFoodBinding;
+import com.example.seventh.ui.viewmodels.DrinkViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +28,7 @@ import java.util.List;
 public class Drink extends Fragment {
     MainActivity mainActivity;
     FragmentFoodBinding binding;
-    FragmentManager fragmentManager;
+    DrinkViewModel drinkViewModel;
     public Drink() {
         super(R.layout.fragment_drink);
     }
@@ -35,6 +37,13 @@ public class Drink extends Fragment {
         super.onAttach(context);
         mainActivity = (MainActivity) context;
     }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        drinkViewModel = new ViewModelProvider(this).get(DrinkViewModel.class);
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -46,6 +55,7 @@ public class Drink extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         generateElements();
+        drinkViewModel.drinks.observe(getViewLifecycleOwner(), drinks -> drinkAdapter.updateDrinks(drinks));
     }
 
     private void generateElements() {
