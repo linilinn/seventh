@@ -16,11 +16,11 @@ import com.example.seventh.ui.activities.MainActivity;
 import com.example.seventh.R;
 import com.example.seventh.databinding.FragmentLogInBinding;
 
-public class LogIn extends Fragment {
+public class LogInFragment extends Fragment {
     MainActivity mainActivity;
     FragmentLogInBinding binding;
     FragmentManager fragmentManager;
-    public LogIn() {
+    public LogInFragment() {
         super(R.layout.fragment_log_in);
     }
     @Override

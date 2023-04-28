@@ -13,14 +13,13 @@ import androidx.navigation.Navigation;
 
 import com.example.seventh.ui.activities.MainActivity;
 import com.example.seventh.R;
-import com.example.seventh.databinding.FragmentStartBinding;
+import com.example.seventh.databinding.FragmentChooseBinding;
 
-public class Start extends Fragment {
+public class ChooseFragment extends Fragment {
+    FragmentChooseBinding binding;
     MainActivity mainActivity;
-    @NonNull FragmentStartBinding binding;
-
-    public Start() {
-        super(R.layout.fragment_start);
+    public ChooseFragment() {
+        super(R.layout.fragment_choose);
     }
 
     @Override
@@ -29,20 +28,26 @@ public class Start extends Fragment {
         mainActivity = (MainActivity) context;
     }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        binding = FragmentStartBinding.inflate(inflater, container, false);
+        binding = FragmentChooseBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 
     @Override
     public void onViewCreated(@NonNull View view1, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view1, savedInstanceState);
-        binding.button.setOnClickListener(view -> {
-            Bundle bundle = new Bundle();
-            bundle.putString("name", binding.editTextTextPersonName.getText().toString());
-            Navigation.findNavController(view).navigate(R.id.action_start2_to_logIn, bundle);
+        binding.button3.setOnClickListener(view -> {
+            Navigation.findNavController(view).navigate(R.id.action_choose_to_drink);
+        });
+        binding.button4.setOnClickListener(view -> {
+            Navigation.findNavController(view).navigate(R.id.action_choose_to_food);
         });
     }
 }

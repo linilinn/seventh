@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/start2"
-        android:name="com.example.seventh.ui.fragments.Start"
+        android:name="com.example.seventh.ui.fragments.StartFragment"
         android:label="fragment_start"
         tools:layout="@layout/fragment_start" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/logIn"
-        android:name="com.example.seventh.ui.fragments.LogIn"
+        android:name="com.example.seventh.ui.fragments.LogInFragment"
         android:label="fragment_log_in"
         tools:layout="@layout/fragment_log_in" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/choose"
-        android:name="com.example.seventh.ui.fragments.Choose"
+        android:name="com.example.seventh.ui.fragments.ChooseFragment"
         android:label="fragment_choose"
         tools:layout="@layout/fragment_choose" >
         <action
@@ -37,7 +37,7 @@
     </fragment>
     <fragment
         android:id="@+id/drink"
-        android:name="com.example.seventh.ui.fragments.Drink"
+        android:name="com.example.seventh.ui.fragments.DrinkFragment"
         android:label="fragment_drink"
         tools:layout="@layout/fragment_drink" >
         <action
@@ -46,7 +46,7 @@
     </fragment>
     <fragment
         android:id="@+id/foodModel"
-        android:name="com.example.seventh.ui.fragments.Food"
+        android:name="com.example.seventh.ui.fragments.FoodFragment"
         android:label="fragment_food"
         tools:layout="@layout/fragment_food" >
         <action
@@ -55,7 +55,7 @@
     </fragment>
     <fragment
         android:id="@+id/item"
-        android:name="com.example.seventh.ui.fragments.Item"
+        android:name="com.example.seventh.ui.fragments.ItemFragment"
         android:label="fragment_item"
         tools:layout="@layout/fragment_item" />
 </navigation>

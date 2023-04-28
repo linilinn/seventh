@@ -2,6 +2,7 @@ package com.example.seventh.ui.adapters;
 
 import static android.app.PendingIntent.getActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,31 +10,37 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.seventh.R;
 import com.example.seventh.data.datamodels.DrinkModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DrinkAdapter extends RecyclerView.Adapter<DrinkAdapter.ViewHolder> {
-    private List<DrinkModel> drinkModelList;
+    private List<DrinkModel> drinks;
+    private LayoutInflater inflater;
+    private Context context;
 
-
-    public DrinkAdapter(List<DrinkModel> drinkList) {
-        this.drinkModelList = drinkList;
+    public DrinkAdapter(Context context) {
+        this.inflater = LayoutInflater.from(context);
+        this.drinks = new ArrayList<>();
+        this.context = context;
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.drink_item, parent, false);
+    @NonNull
+    public DrinkAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = inflater.inflate(R.layout.drink_item, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        DrinkModel drinkModel = drinkModelList.get(position);
+        DrinkModel drinkModel = drinks.get(position);
         holder.textView.setText(drinkModel.getDrink());
         holder.imageView.setImageResource(drinkModel.getImageResource());
         holder.itemView.setOnClickListener(view -> {
@@ -46,7 +53,7 @@ public class DrinkAdapter extends RecyclerView.Adapter<DrinkAdapter.ViewHolder> 
 
     @Override
     public int getItemCount() {
-        return drinkModelList.size();
+        return drinks.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -58,5 +65,11 @@ public class DrinkAdapter extends RecyclerView.Adapter<DrinkAdapter.ViewHolder> 
             textView = (TextView) itemView.findViewById(R.id.textView12);
             imageView = (ImageView) itemView.findViewById(R.id.imageView6);
         }
+    }
+
+    public void updateDrinks(List<DrinkModel> drinks) {
+        this.drinks.clear();;
+        this.drinks = drinks;
+        notifyDataSetChanged();
     }
 }

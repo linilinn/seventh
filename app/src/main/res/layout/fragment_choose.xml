@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark_red"
-    tools:context=".ui.fragments.Choose">
+    tools:context=".ui.fragments.ChooseFragment">
 
     <ImageView
         android:id="@+id/imageView"

@@ -14,12 +14,12 @@ import com.example.seventh.ui.activities.MainActivity;
 import com.example.seventh.R;
 import com.example.seventh.databinding.FragmentItemBinding;
 
-public class Item extends Fragment {
+public class ItemFragment extends Fragment {
     MainActivity mainActivity;
     @NonNull
     FragmentItemBinding binding;
 
-    public Item() {
+    public ItemFragment() {
         super(R.layout.fragment_item);
     }
 
