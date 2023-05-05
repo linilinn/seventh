@@ -1,12 +1,10 @@
-package com.example.seventh.data.datasources;
-
-import android.util.Log;
+package com.example.seventh.data.sources;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.example.seventh.R;
-import com.example.seventh.data.datamodels.FoodModel;
+import com.example.seventh.data.models.FoodModel;
 
 import java.util.ArrayList;
 import java.util.List;

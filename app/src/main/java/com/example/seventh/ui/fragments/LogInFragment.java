@@ -10,16 +10,18 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 
 import com.example.seventh.ui.activities.MainActivity;
 import com.example.seventh.R;
 import com.example.seventh.databinding.FragmentLogInBinding;
+import com.example.seventh.ui.viewmodels.LogInViewModel;
 
 public class LogInFragment extends Fragment {
     MainActivity mainActivity;
     FragmentLogInBinding binding;
-    FragmentManager fragmentManager;
+    private LogInViewModel logInViewModel;
     public LogInFragment() {
         super(R.layout.fragment_log_in);
     }
@@ -28,10 +30,18 @@ public class LogInFragment extends Fragment {
         super.onAttach(context);
         mainActivity = (MainActivity) context;
     }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        logInViewModel = new ViewModelProvider(this).get(LogInViewModel.class);
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = FragmentLogInBinding.inflate(inflater, container, false);
+
         return binding.getRoot();
     }
 
@@ -40,8 +50,11 @@ public class LogInFragment extends Fragment {
         super.onViewCreated(view1, savedInstanceState);
         Bundle bundle1 = getArguments();
         String name = bundle1.getString("name");
-        binding.textView6.setText("Здравствуйте, " + bundle1.getString("name") + "!");
+        binding.textView6.setText("Здравствуйте, " + name + "!");
         binding.button2.setOnClickListener(view -> {
+            String login = binding.editTextLogin.getText().toString();
+            logInViewModel.addLogInAppSpecific(login);
+            logInViewModel.addLogInExternalStorage(login);
             Navigation.findNavController(view).navigate(R.id.action_logIn_to_choose);
         });
     }

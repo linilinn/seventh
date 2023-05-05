@@ -15,7 +15,7 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.seventh.R;
-import com.example.seventh.data.datamodels.FoodModel;
+import com.example.seventh.data.models.FoodModel;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -3,8 +3,8 @@ package com.example.seventh.ui.viewmodels;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.seventh.data.datamodels.DrinkModel;
-import com.example.seventh.data.datarepositories.DrinkRepository;
+import com.example.seventh.data.models.DrinkModel;
+import com.example.seventh.data.repositories.DrinkRepository;
 
 import java.util.List;
 

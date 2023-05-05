@@ -1,4 +1,4 @@
-package com.example.seventh.data.datamodels;
+package com.example.seventh.data.models;
 
 public class FoodModel {
     private String food;

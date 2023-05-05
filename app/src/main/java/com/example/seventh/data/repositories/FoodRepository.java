@@ -1,9 +1,9 @@
-package com.example.seventh.data.datarepositories;
+package com.example.seventh.data.repositories;
 
 import androidx.lifecycle.LiveData;
 
-import com.example.seventh.data.datamodels.FoodModel;
-import com.example.seventh.data.datasources.FoodDataSource;
+import com.example.seventh.data.models.FoodModel;
+import com.example.seventh.data.sources.FoodDataSource;
 
 import java.util.List;
 
