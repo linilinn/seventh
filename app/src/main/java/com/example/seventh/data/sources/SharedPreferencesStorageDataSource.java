@@ -3,6 +3,8 @@ package com.example.seventh.data.sources;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import androidx.annotation.NonNull;
+
 import java.io.File;
 
 public class SharedPreferencesStorageDataSource {
@@ -10,7 +12,7 @@ public class SharedPreferencesStorageDataSource {
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
 
-    public SharedPreferencesStorageDataSource(Context context) {
+    public SharedPreferencesStorageDataSource(@NonNull Context context) {
         this.context = context;
         sharedPreferences = context.getSharedPreferences("login", Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
