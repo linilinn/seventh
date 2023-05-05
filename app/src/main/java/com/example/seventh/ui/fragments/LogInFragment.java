@@ -53,8 +53,9 @@ public class LogInFragment extends Fragment {
         binding.textView6.setText("Здравствуйте, " + name + "!");
         binding.button2.setOnClickListener(view -> {
             String login = binding.editTextLogin.getText().toString();
-            logInViewModel.addLogInAppSpecific(login);
+
             logInViewModel.addLogInExternalStorage(login);
+            logInViewModel.addLogInAppSpecific(login);
             Navigation.findNavController(view).navigate(R.id.action_logIn_to_choose);
         });
     }

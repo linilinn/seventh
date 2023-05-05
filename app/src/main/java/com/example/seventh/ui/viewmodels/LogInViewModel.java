@@ -21,4 +21,12 @@ public class LogInViewModel extends AndroidViewModel {
     public void addLogInExternalStorage(String login) {
         logInRepository.addLogInExternalStorage(login);
     }
+
+    public void addLogInSharedPreferences(String login) {
+        logInRepository.addLogInSharedPreferences(login);
+    }
+
+    public String getLogin(String login) {
+        return logInRepository.getLogin(login);
+    }
 }
