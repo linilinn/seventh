@@ -1,4 +1,4 @@
-package com.example.seventh.data.databases;
+package com.example.seventh.data.databases.entities;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
@@ -23,7 +23,6 @@ public class DrinkEntity {
     public String getDrink() {
         return drink;
     }
-
     public String getDrinkDescription() {
         return drinkDescription;
     }
@@ -31,7 +30,6 @@ public class DrinkEntity {
     public void setDrink(String drink) {
         this.drink = drink;
     }
-
     public void setDrinkDescription(String drinkDescription) {
         this.drinkDescription = drinkDescription;
     }
