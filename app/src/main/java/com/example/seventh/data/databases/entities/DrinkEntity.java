@@ -20,37 +20,31 @@ public class DrinkEntity {
         this.drinkDescription = drinkDescription;
         this.imageResource = imageResource;
     }
-
+    public int getIdDrink() {
+        return idDrink;
+    }
+    public void setIdDrink(int idDrink) {
+        this.idDrink = idDrink;
+    }
     public String getDrink() {
         return drink;
+    }
+    public void setDrink(String drink) {
+        this.drink = drink;
     }
     public String getDrinkDescription() {
         return drinkDescription;
     }
-
-    public void setDrink(String drink) {
-        this.drink = drink;
-    }
     public void setDrinkDescription(String drinkDescription) {
         this.drinkDescription = drinkDescription;
     }
-
     public void setImageResource(int imageResource) {
         this.imageResource = imageResource;
     }
-
     public int getImageResource() {
         return imageResource;
     }
     public DrinkModel toDrink() {
         return new DrinkModel(this.drink, this.drinkDescription, this.imageResource);
-    }
-
-    public int getIdDrink() {
-        return idDrink;
-    }
-
-    public void setIdDrink(int idDrink) {
-        this.idDrink = idDrink;
     }
 }

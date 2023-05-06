@@ -2,6 +2,7 @@ package com.example.seventh.ui.viewmodels;
 
 import android.app.Application;
 
+import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
@@ -19,6 +20,6 @@ public class FoodViewModel extends AndroidViewModel {
         allFood = repository.getAllFood();
     }
     public LiveData<List<FoodModel>> getAllFood() { return allFood; }
-    public void insert(FoodModel food) { repository.insert(new FoodEntity(food.getFood(),
+    public void insert(@NonNull FoodModel food) { repository.insert(new FoodEntity(food.getFood(),
             food.getFoodDescription(), food.getImageResource())); }
 }

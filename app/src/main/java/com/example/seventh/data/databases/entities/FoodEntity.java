@@ -20,36 +20,30 @@ public class FoodEntity {
         this.foodDescription = foodDescription;
         this.imageResource = imageResource;
     }
-
+    public int getIdFood() {
+        return idFood;
+    }
+    public void setIdFood(int idFood) {
+        this.idFood = idFood;
+    }
     public String getFood() {
         return food;
+    }
+    public void setFood(String food) {
+        this.food = food;
     }
     public String getFoodDescription() {
         return foodDescription;
     }
-    public int getImageResource() {
-        return imageResource;
-    }
-
-    public void setFood(String food) {
-        this.food = food;
-    }
     public void setFoodDescription(String foodDescription) {
         this.foodDescription = foodDescription;
     }
-
+    public int getImageResource() {
+        return imageResource;
+    }
     public void setImageResource(int imageResource) {
         this.imageResource = imageResource;
     }
-
-    public int getIdFood() {
-        return idFood;
-    }
-
-    public void setIdFood(int idFood) {
-        this.idFood = idFood;
-    }
-
     public FoodModel toFood() {
         return new FoodModel(this.food, this.foodDescription, this.imageResource);
     }

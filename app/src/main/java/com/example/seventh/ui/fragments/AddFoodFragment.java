@@ -36,7 +36,8 @@ public class AddFoodFragment extends Fragment {
         binding = FragmentAddFoodBinding.inflate(inflater, container, false);
         Bundle args = getArguments();
         if (args != null && args.containsKey("RESULT_OK_FOOD") && args.containsKey("RESULT_OK_FOODDESCRIPTION")) {
-            FoodModel food = new FoodModel(args.getString("RESULT_OK_FOOD"), args.getString("RESULT_OK_FOODDESCRIPTION"), R.drawable.food);
+            FoodModel food = new FoodModel(args.getString("RESULT_OK_FOOD"),
+                    args.getString("RESULT_OK_FOODDESCRIPTION"), R.drawable.food);
             foodViewModel.insert(food);
         }
         return binding.getRoot();
