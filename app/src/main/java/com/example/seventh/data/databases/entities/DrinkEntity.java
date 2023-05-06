@@ -41,7 +41,7 @@ public class DrinkEntity {
     public int getImageResource() {
         return imageResource;
     }
-    public DrinkModel toFood() {
+    public DrinkModel toDrink() {
         return new DrinkModel(this.drink, this.drinkDescription, this.imageResource);
     }
 }
