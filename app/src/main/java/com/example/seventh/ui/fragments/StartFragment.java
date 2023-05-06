@@ -42,7 +42,7 @@ public class StartFragment extends Fragment {
         binding.button.setOnClickListener(view -> {
             Bundle bundle = new Bundle();
             bundle.putString("name", binding.editTextTextPersonName.getText().toString());
-            Navigation.findNavController(view).navigate(R.id.action_start2_to_logIn, bundle);
+            Navigation.findNavController(view).navigate(R.id.action_start_to_logIn, bundle);
         });
     }
 }

@@ -10,6 +10,7 @@ import com.example.seventh.data.models.DrinkModel;
 @Entity(tableName = "drink_table")
 public class DrinkEntity {
     @PrimaryKey(autoGenerate = true)
+    private int idDrink;
     private String drink;
     private String drinkDescription;
     private int imageResource;
@@ -43,5 +44,13 @@ public class DrinkEntity {
     }
     public DrinkModel toDrink() {
         return new DrinkModel(this.drink, this.drinkDescription, this.imageResource);
+    }
+
+    public int getIdDrink() {
+        return idDrink;
+    }
+
+    public void setIdDrink(int idDrink) {
+        this.idDrink = idDrink;
     }
 }

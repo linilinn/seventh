@@ -1,3 +1,4 @@
+/*
 package com.example.seventh.ui.fragments;
 
 import android.content.Context;
@@ -50,3 +51,5 @@ public class ItemFragment extends Fragment {
         }
     }
 }
+
+ */

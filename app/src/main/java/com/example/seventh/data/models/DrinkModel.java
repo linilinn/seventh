@@ -1,6 +1,7 @@
 package com.example.seventh.data.models;
 
 public class DrinkModel {
+    private int idDrink;
     private String drink;
     private String drinkDescription;
     private int imageResource;
@@ -21,5 +22,25 @@ public class DrinkModel {
 
     public int getImageResource() {
         return imageResource;
+    }
+
+    public int getIdDrink() {
+        return idDrink;
+    }
+
+    public void setIdDrink(int idDrink) {
+        this.idDrink = idDrink;
+    }
+
+    public void setImageResource(int imageResource) {
+        this.imageResource = imageResource;
+    }
+
+    public void setDrinkDescription(String drinkDescription) {
+        this.drinkDescription = drinkDescription;
+    }
+
+    public void setDrink(String drink) {
+        this.drink = drink;
     }
 }

@@ -1,3 +1,4 @@
+/*
 package com.example.seventh.ui.adapters;
 
 import static android.app.PendingIntent.getActivity;
@@ -47,7 +48,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
             Bundle bundle = new Bundle();
             bundle.putString("item", foodModel.getFood());
             bundle.putString("description", foodModel.getFoodDescription());
-            Navigation.findNavController(view).navigate(R.id.action_food_to_item, bundle);
+            //Navigation.findNavController(view).navigate(R.id.action_food_to_item, bundle);
         });
     }
 
@@ -73,3 +74,5 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
         notifyDataSetChanged();
     }
 }
+
+ */

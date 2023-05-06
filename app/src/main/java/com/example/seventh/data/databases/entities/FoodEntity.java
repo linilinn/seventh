@@ -10,6 +10,7 @@ import com.example.seventh.data.models.FoodModel;
 @Entity(tableName = "food_table")
 public class FoodEntity {
     @PrimaryKey(autoGenerate = true)
+    private int idFood;
     private String food;
     private String foodDescription;
     private int imageResource;
@@ -39,6 +40,14 @@ public class FoodEntity {
 
     public void setImageResource(int imageResource) {
         this.imageResource = imageResource;
+    }
+
+    public int getIdFood() {
+        return idFood;
+    }
+
+    public void setIdFood(int idFood) {
+        this.idFood = idFood;
     }
 
     public FoodModel toFood() {

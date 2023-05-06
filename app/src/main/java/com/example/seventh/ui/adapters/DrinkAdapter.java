@@ -1,3 +1,4 @@
+/*
 package com.example.seventh.ui.adapters;
 
 import static android.app.PendingIntent.getActivity;
@@ -47,7 +48,7 @@ public class DrinkAdapter extends RecyclerView.Adapter<DrinkAdapter.ViewHolder> 
             Bundle bundle = new Bundle();
             bundle.putString("item", drinkModel.getDrink());
             bundle.putString("description", drinkModel.getDrinkDescription());
-            Navigation.findNavController(view).navigate(R.id.action_drink_to_item, bundle);
+            //Navigation.findNavController(view).navigate(R.id.action_drink_to_item, bundle);
         });
     }
 
@@ -73,3 +74,5 @@ public class DrinkAdapter extends RecyclerView.Adapter<DrinkAdapter.ViewHolder> 
         notifyDataSetChanged();
     }
 }
+
+ */

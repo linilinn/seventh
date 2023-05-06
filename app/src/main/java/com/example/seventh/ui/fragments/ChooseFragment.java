@@ -44,10 +44,10 @@ public class ChooseFragment extends Fragment {
     public void onViewCreated(@NonNull View view1, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view1, savedInstanceState);
         binding.button3.setOnClickListener(view -> {
-            Navigation.findNavController(view).navigate(R.id.action_choose_to_drink);
+            Navigation.findNavController(view).navigate(R.id.action_choose_to_addDrinkFragment);
         });
         binding.button4.setOnClickListener(view -> {
-            Navigation.findNavController(view).navigate(R.id.action_choose_to_food);
+            Navigation.findNavController(view).navigate(R.id.action_choose_to_addFoodFragment);
         });
     }
 }

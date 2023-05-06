@@ -8,7 +8,7 @@
     tools:context=".ui.fragments.LogInFragment">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageViewWaiter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="276dp"
@@ -32,7 +32,7 @@
         app:layout_constraintVertical_bias="0.004">
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/textViewAppName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/space_grotesk_light"
@@ -43,11 +43,11 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/textViewAppFunction"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textView4"
-            android:layout_centerHorizontal="@id/textView4"
+            android:layout_below="@id/textViewAppName"
+            android:layout_centerHorizontal="@id/textViewAppName"
             android:fontFamily="@font/space_grotesk_light"
             android:gravity="center"
             android:text="@string/app_for"

@@ -3,15 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation"
-    app:startDestination="@id/start2">
+    app:startDestination="@id/start">
 
     <fragment
-        android:id="@+id/start2"
+        android:id="@+id/start"
         android:name="com.example.seventh.ui.fragments.StartFragment"
         android:label="fragment_start"
         tools:layout="@layout/fragment_start" >
         <action
-            android:id="@+id/action_start2_to_logIn"
+            android:id="@+id/action_start_to_logIn"
             app:destination="@id/logIn" />
     </fragment>
     <fragment
@@ -29,33 +29,28 @@
         android:label="fragment_choose"
         tools:layout="@layout/fragment_choose" >
         <action
-            android:id="@+id/action_choose_to_drink"
-            app:destination="@id/drink" />
+            android:id="@+id/action_choose_to_addDrinkFragment"
+            app:destination="@id/addDrinkFragment" />
         <action
-            android:id="@+id/action_choose_to_food"
-            app:destination="@id/foodModel" />
+            android:id="@+id/action_choose_to_addFoodFragment"
+            app:destination="@id/addFoodFragment" />
     </fragment>
     <fragment
-        android:id="@+id/drink"
-        android:name="com.example.seventh.ui.fragments.DrinkFragment"
-        android:label="fragment_drink"
-        tools:layout="@layout/fragment_drink" >
+        android:id="@+id/addDrinkFragment"
+        android:name="com.example.seventh.ui.fragments.AddDrinkFragment"
+        android:label="fragment_add_drink"
+        tools:layout="@layout/fragment_add_drink" >
         <action
-            android:id="@+id/action_drink_to_item"
-            app:destination="@id/item" />
+            android:id="@+id/action_addDrinkFragment_to_choose"
+            app:destination="@id/choose" />
     </fragment>
     <fragment
-        android:id="@+id/foodModel"
-        android:name="com.example.seventh.ui.fragments.FoodFragment"
-        android:label="fragment_food"
-        tools:layout="@layout/fragment_food" >
+        android:id="@+id/addFoodFragment"
+        android:name="com.example.seventh.ui.fragments.AddFoodFragment"
+        android:label="fragment_add_food"
+        tools:layout="@layout/fragment_add_food" >
         <action
-            android:id="@+id/action_food_to_item"
-            app:destination="@id/item" />
+            android:id="@+id/action_addFoodFragment_to_choose"
+            app:destination="@id/choose" />
     </fragment>
-    <fragment
-        android:id="@+id/item"
-        android:name="com.example.seventh.ui.fragments.ItemFragment"
-        android:label="fragment_item"
-        tools:layout="@layout/fragment_item" />
 </navigation>

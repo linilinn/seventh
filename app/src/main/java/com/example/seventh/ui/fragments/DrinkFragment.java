@@ -1,3 +1,4 @@
+/*
 package com.example.seventh.ui.fragments;
 
 import android.content.Context;
@@ -55,3 +56,5 @@ public class DrinkFragment extends Fragment {
         drinkViewModel.drinks.observe(getViewLifecycleOwner(), drinks -> drinkAdapter.updateDrinks(drinks));
     }
 }
+
+ */

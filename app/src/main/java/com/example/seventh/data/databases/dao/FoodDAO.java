@@ -1,6 +1,7 @@
 package com.example.seventh.data.databases.dao;
 
 import androidx.lifecycle.LiveData;
+import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
@@ -9,6 +10,7 @@ import com.example.seventh.data.databases.entities.FoodEntity;
 
 import java.util.List;
 
+@Dao
 public interface FoodDAO {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     long insert(FoodEntity foodItem);
